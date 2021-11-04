@@ -1,27 +1,31 @@
-#function to searh value in array
-def binary_search(arr, l, r, x)
-    #middle of array
+module Ordenacao
 
-    if r >= l
-        #middle of array
-        middle = l + (r -l)
+    class Binary
+        #function to searh value in array
+        def binary_search(arr, l, r, x)
+            #middle of array
 
-        if arr[middle] == x
-            return middle
+            if r >= l
+                #middle of array
+                middle = l + (r -l)
 
-        elsif
-            m = middle - 1
-            return binary_search(arr, l, m, x)
-        else
-            m = middle - 1
-            return binary_search(arr, l, 1, x)          
+                if arr[middle] == x
+                    return middle
+
+                elsif
+                    m = middle - 1
+                    return binary_search(arr, l, m, x)
+                else
+                    m = middle - 1
+                    return binary_search(arr, l, 1, x)
+                end
+
+            else
+                return -1
+            end
         end
-
-    else
-        return -1
     end
 end
-
 #array
 arr = Array[ 2, 3, 4, 10, 40 ]
 
@@ -30,8 +34,9 @@ x = 11
 
 len = (arr.length) -1
 
+obj = Ordenacao::Binary.new
 
-result = binary_search(arr, 0, len, x)
+result = obj.binary_search(arr, 0, len, x)
 
 if result == -1
     puts "Element is not present in array"
