@@ -36,4 +36,4 @@ if result == -1
 else
     puts "Element #{x} is present in array"
 end
-==end
+=end
