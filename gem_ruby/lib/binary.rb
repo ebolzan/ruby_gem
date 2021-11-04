@@ -2,12 +2,13 @@ module Ordenacao
 
     class Binary
         #function to searh value in array
+        #return -1 if not found and 0 if found
         def binary_search(arr, l, r, x)
             #middle of array
 
             if r >= l
                 #middle of array
-                middle = l + (r -l)
+                middle = l + r -l
 
                 if arr[middle] == x
                     return middle
@@ -25,21 +26,4 @@ module Ordenacao
             end
         end
     end
-end
-#array
-arr = Array[ 2, 3, 4, 10, 40 ]
-
-#value to found
-x = 11
-
-len = (arr.length) -1
-
-obj = Ordenacao::Binary.new
-
-result = obj.binary_search(arr, 0, len, x)
-
-if result == -1
-    puts "Element is not present in array"
-else
-    puts "Element #{x} is present in array"
 end
