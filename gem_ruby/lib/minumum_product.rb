@@ -63,8 +63,8 @@ module Product
 
     end
 end
-# Driver code
-a = Array[-1, -1, -2, 4, 3]
-n = a.length
-result = Product::ProductMinimum.new.minProductSubset(a, n)
-puts(result)
+# # Driver code
+# a = Array[-1, -1, -2, 4, 3]
+# n = a.length
+# result = Product::ProductMinimum.new.minProductSubset(a, n)
+# puts(result)
